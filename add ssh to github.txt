@@ -1,0 +1,12 @@
+在同台电脑上增加多个ssh key，如需要添加到github中:
+
+1.到.ssh的目录，如C:\Users\sungymf\.ssh
+执行ssh-keygen -t rsa -C "mk001@mk.com"
+
+不要一直next,取名为：id_rsa_github_mk001
+
+2.ssh-add id_rsa_github_mk001
+3.在github新增ssh,将生成的id_rsa_github_mk001.pub 中的内容拷贝过去。
+
+4.执行
+ssh -T git@github.com
